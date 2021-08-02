@@ -1,0 +1,3 @@
+[submodule "motion-planners"]
+	path = motion-planners
+	url = https://github.com/caelan/motion-planners
