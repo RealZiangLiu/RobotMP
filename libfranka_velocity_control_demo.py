@@ -95,7 +95,6 @@ def main():
     for idx in range(100):
         q, qdot, x, R, xdot, tau, J = readState(conn)
         print("I read the robot state")
-        print(x)
 
         """ start of main part you will customize """
 

@@ -4,7 +4,7 @@
 
 from os.path import abspath, dirname, join
 import sys
-sys.path.insert(0, join('/home', 'ziang', 'Workspace', 'lib', 'ompl-1.5.2', 'py-bindings'))
+sys.path.insert(0, join('/home', 'iliad', 'ompl', 'py-bindings'))
 # print(sys.path)
 from ompl import base as ob
 from ompl import geometric as goem_planners
@@ -19,8 +19,9 @@ def plan():
     space = ob.RealVectorStateSpace(7)
     # set state limits
     bounds = ob.RealVectorBounds(7)
-    bounds_lower = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-    bounds_upper = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    bounds_lower = [-2.8973, -1.7628, -2.8973, -3.0718, -2.8973, -0.0175, -2.8973]
+    bounds_upper = [2.8973, 1.7628, 2.8973, -0.0698, 2.8973, 3.7525, 2.8973]
+
     for i in range(7):
       bounds.setLow(i, bounds_lower[i])
       bounds.setHigh(i, bounds_upper[i])
