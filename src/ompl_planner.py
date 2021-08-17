@@ -95,8 +95,8 @@ class OMPLPlanner:
     self.problem.setStartAndGoalStates(self.start_state, self.goal_state)
     print(f"[Info] Successfully set start: {start} goal: {goal}")
   
-  def set_step_size(self, step_size):
-    self.planner.setRange(step_size)
+  def set_step_distance(self, step_distance):
+    self.planner.setRange(step_distance)
 
   def plan(self, time_limit=2.0):
     
@@ -116,5 +116,5 @@ class OMPLPlanner:
 if __name__ == "__main__":
   op = OMPLPlanner(planner="rrt_connect")
   op.set_start_and_goal([0,0,0,0,0,0,0], [1,1,1,1,1,1,0.5])
-  op.set_step_size(0.5)
+  op.set_step_distance(0.5)
   path, cost, t = op.plan(time_limit=2.0)

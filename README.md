@@ -1,4 +1,6 @@
 # RobotMP
+## Introduction
+Simple wrapper for OMPL planners to use in robotics applications. Abstracts away redundant processes and simplifies OMPL API for planning. Easy and fast planning with as few as three function calls.
 ## Installation
 ### Standard Process (Tested on Ubuntu 18.04)
 * Download installation script
@@ -25,6 +27,11 @@ the pre-bugfix version.
 
 ## Usage
 ```
+  import numpy as np
+  from numpy.linalg import norm
+
+  import robotmp as rmp
+  
   # create planner
   planner = rmp.OMPLPlanner(state_space_bounds = [[-1., -1., -1.],[1., 1., 1.]],
                             state_validity_checker = is_safe,
@@ -36,3 +43,9 @@ the pre-bugfix version.
   # solve!
   path, cost, t = planner.plan(time_limit = 3.0)
 ```
+
+### Planner Settings
+* set_start_and_goal(start = [0,0,0], goal = [1,1,1])
+* set_step_distance(step_distance = 0.5)
+  * Set max distance of a single expand step for random tree related planners (RRT, etc.)
+* TODO
