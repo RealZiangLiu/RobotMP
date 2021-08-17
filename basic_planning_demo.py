@@ -21,13 +21,13 @@ def is_safe(state):
 
 def main():
   # create planner
-  planner = rmp.OMPLPlanner(state_space_bounds = [[-1., -1., -1.],
-                                              [1., 1., 1.]],
-                        state_validity_checker = is_safe,
-                        planner = "rrt_connect")
+  planner = rmp.OMPLPlanner(state_space_bounds = [[-1., -1., -1.],[1., 1., 1.]],
+                            state_validity_checker = is_safe,
+                            planner = "rrt_connect")
+  
   # set start and goal states
-  planner.set_start_and_goal(start = [-0.5, 1.0, 1.0],
-                              goal = [0.5, 0.5, 0.5])
+  planner.set_start_and_goal(start = [-0.5, 1.0, 1.0], goal = [0.5, 0.5, 0.5])
+  
   # solve!
   path, cost, t = planner.plan(time_limit = 3.0)
 
