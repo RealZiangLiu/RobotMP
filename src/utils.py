@@ -4,10 +4,10 @@ import time
 import pybullet as p
 import numpy as np
 
-num_joints = 9
+num_joints = 7
 
 def set_joint_positions(body, joint_positions):
-    for i in range(9):
+    for i in range(7):
         p.resetJointState(body, i, targetValue=joint_positions[i], targetVelocity=0)
 
 

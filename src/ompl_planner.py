@@ -9,7 +9,6 @@ from ompl import geometric as gp
 
 # sys.path.insert(0, os.path.join('/home', 'ziang', 'Workspace', 'lib', 'ompl-1.5.2', 'py-bindings'))
 
-
 class OMPLPlanner:
     """
       Wrapper class for OMPL planners
@@ -99,19 +98,20 @@ class OMPLPlanner:
     def set_step_distance(self, step_distance):
         self.planner.setRange(step_distance)
 
-    def plan(self, time_limit=2.0, goal_tol=1e-4):
+    def plan(self, time_limit=2.0, goal_tol=1e-4, VERBOSE=False):
         t_1 = time.perf_counter()
         solved = self.planner.solve(time_limit)
         t_2 = time.perf_counter()
         if solved:
             path = self.problem.getSolutionPath()
-            if self.problem.hasExactSolution():
-                print("[Info] Found exact solution:\n%s" % path)
-            else:
-                print("[Info] Found approximate solution:\n%s" % path)
-                print("[Info] Solution difference:\n%s" % self.problem.getSolutionDifference())
-            print(f"[Info] Time: {t_2 - t_1:0.4f}s")
-            print("[Info] Solution Cost: %f\n" % path.length())
+            if VERBOSE:
+                if self.problem.hasExactSolution():
+                    print("[Info] Found exact solution:\n%s" % path)
+                else:
+                    print("[Info] Found approximate solution:\n%s" % path)
+                    print("[Info] Solution difference:\n%s" % self.problem.getSolutionDifference())
+                print(f"[Info] Time: {t_2 - t_1:0.4f}s")
+                print("[Info] Solution Cost: %f\n" % path.length())
             return path, path.length(), t_2 - t_1
         else:
             print("[Info] Solver failed.")

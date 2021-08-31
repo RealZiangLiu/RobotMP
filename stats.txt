@@ -1,0 +1,37 @@
+No collision checking
+
+===============================
+[INFO]: Stats for PyBullet Planning
+[INFO]: Num iters:  1000
+[INFO]: Average path cost:  6.210262255651018
+[INFO]: Average time:  0.013841955973009135
+[INFO]: Average waypoints:  7.194
+
+===============================
+[INFO]: Stats for OMPL
+[INFO]: Num iters:  1000
+[INFO]: Average path cost:  2.556703949946495
+[INFO]: Average time:  0.0010897031700023946
+[INFO]: Average waypoints:  7.0
+
+With collision checking
+===============================
+[INFO]: Stats for PyBullet Planning (rrt_connect)
+[INFO]: Num iters:  1000
+[INFO]: Average path cost:  6.081333551409855
+[INFO]: Average time:  0.013348370382996109
+[INFO]: Average waypoints:  7.099
+
+===============================
+[INFO]: Stats for PyBullet Planning (birrt)
+[INFO]: Num iters:  1000
+[INFO]: Average path cost:  6.202733021133524
+[INFO]: Average time:  0.016294926849011064
+[INFO]: Average waypoints:  7.196
+
+===============================
+[INFO]: Stats for OMPL
+[INFO]: Num iters:  1000
+[INFO]: Average path cost:  6.183739902728165
+[INFO]: Average time:  0.0011905525100028172
+[INFO]: Average waypoints:  14.002

@@ -2,3 +2,6 @@
 [submodule "PandaRobot.jl"]
 	path = PandaRobot.jl
 	url = git@github.com:StanfordASL/PandaRobot.jl.git
+[submodule "pybullet-planning"]
+	path = pybullet-planning
+	url = git@github.com:caelan/pybullet-planning.git

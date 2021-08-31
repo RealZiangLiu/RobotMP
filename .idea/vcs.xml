@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/PandaRobot.jl" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/motion-planners" vcs="Git" />
   </component>
 </project>
