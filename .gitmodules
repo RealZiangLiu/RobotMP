@@ -1,1 +1,4 @@
 
+[submodule "PandaRobot.jl"]
+	path = PandaRobot.jl
+	url = git@github.com:StanfordASL/PandaRobot.jl.git
