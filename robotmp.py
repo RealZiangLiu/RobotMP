@@ -1,1 +1,1 @@
-from src.ompl_planner import OMPLPlanner
+from .src.ompl_planner import OMPLPlanner
